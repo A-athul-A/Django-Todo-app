@@ -38,6 +38,13 @@
             name="priority"
             placeholder="Priority"/>
         </div>
+        <div class="form-control">
+          <input
+            type="date"
+            class="form-control"
+            name="date"
+          />
+        </div>
         <input type="submit" value="Add" class="btn btn-success" />
       </form>
     </div>
@@ -46,15 +53,22 @@
     <div class="col-md-6 shadow" id="task">
       <h3>Task to be completed</h3>
       {% for tsk in task %}
-      <div class="card shadow" style="border-radius: 9rem; height: 6rem">
+      <div class="card shadow" style="border-radius: 9rem; height: 10rem">
         <div class="card-body" style="color: white; padding-left: 54px">
           <h5 class="card-titile">{{tsk.name}}</h5>
           <p><b>Priority--->{{tsk.priority}}</b></p>
+          <p>Date--->{{tsk.date}}</p>
           <a
             class="btn btn-danger"
             style="margin-left: 23rem; margin-top: -5rem"
             href="{% url 'delete' tsk.id %}">
             Done
+          </a>
+          <a
+            class="btn btn-primary"
+            style="margin-left: 23rem;margin-top: -14rem;width: 64px;"
+            href="{% url 'update' tsk.id %}">
+            Edit
           </a>
         </div>
       </div>
