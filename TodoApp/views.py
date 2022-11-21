@@ -14,9 +14,6 @@ def home(request):
         task.save()
     return render(request,'home.html',{'task':viewTask})
 
-# def details(request):
-#     task = Task.objects.all()
-#     return render(request,'details.html',{'task':task})
 def delete(request,taskId):
     task = Task.objects.get(id=taskId)
     if request.method == 'POST':
