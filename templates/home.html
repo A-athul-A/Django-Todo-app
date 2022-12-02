@@ -45,7 +45,7 @@
             name="date"
           />
         </div>
-        <input type="submit" value="Add" class="btn btn-success" />
+         <input type="submit" value="Add" class="btn btn-success"/>
       </form>
     </div>
 
@@ -61,13 +61,13 @@
           <a
             class="btn btn-danger"
             style="margin-left: 23rem; margin-top: -5rem"
-            href="{% url 'delete' tsk.id %}">
+            href="{% url 'taskdelete' tsk.id %}">
             Done
           </a>
           <a
             class="btn btn-primary"
             style="margin-left: 23rem;margin-top: -14rem;width: 64px;"
-            href="{% url 'update' tsk.id %}">
+            href="{% url 'taskupdate' tsk.id %}">
             Edit
           </a>
         </div>
